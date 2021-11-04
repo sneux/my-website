@@ -4,9 +4,17 @@
     --black: #000000;
 }
 
+html {
+  background: url('https://wallpapercave.com/wp/wp7720121.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 * {
     color: var(--fontColor);
-    font-family: helvetica;
+    font-family: monospace;
 }
 
 body {
@@ -14,6 +22,8 @@ body {
 }
 h1 {
     position: center;
+    padding-top: 5%;
+    margin: auto;
 }
 ul {
     font-family: helvetica;
@@ -30,25 +40,34 @@ li {
     font-family: monospace;
 }
 
-.light-theme {
-    max-width: 500px;
+.mainC {
+    /*background: url('https://wallpapercave.com/wp/wp7720121.jpg') no-repeat;
+    background-size: cover;*/
+    max-width: 700px;
+    position: -webkit-sticky;
+    position: sticky;
     margin: auto;
+    top: 9%;
+    bottom: 100%;
     --bg: var(--white);
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--green);
 }
 
+
+
+
 .dark-theme {
     --bg: var(--black);
-    --fontColor: var(--green);
+    --fontColor:rgb(150, 198, 245);
     --btnBg: var(--white);
     --btnFontColor: var(--black);
 }
 
 .header a{
     float: center;
-    color:aqua;
+    color: rgb(150, 198, 245);
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -82,7 +101,7 @@ li {
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     .header a {
       float: none;
       display: block;
@@ -93,8 +112,22 @@ li {
     }
   }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardContainer {
+  padding: 2px 16px;
+}
+
 .btn {
-    position: right;
+    position: left;
     top: 50px;
     left: 250px;
     height: 50px;
