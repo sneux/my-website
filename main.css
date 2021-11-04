@@ -21,8 +21,8 @@ body {
     background: var(--bg)
 }
 h1 {
-    position: center;
-    padding-top: 5%;
+    position: relative;
+    padding-top: 1%;
     margin: auto;
 }
 ul {
@@ -41,22 +41,25 @@ li {
 }
 
 .mainC {
-    /*background: url('https://wallpapercave.com/wp/wp7720121.jpg') no-repeat;
-    background-size: cover;*/
     max-width: 700px;
     position: -webkit-sticky;
     position: sticky;
     margin: auto;
     top: 9%;
     bottom: 100%;
-    --bg: var(--white);
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--green);
 }
 
-
-
+.center {
+  opacity: 0.9;
+  width: 100%;
+  top: 150%;
+  position: absolute;
+  min-height: 100vh;
+  background: rgb(246, 211, 255);
+}
 
 .dark-theme {
     --bg: var(--black);
