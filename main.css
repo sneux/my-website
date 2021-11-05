@@ -4,14 +4,6 @@
     --black: #000000;
 }
 
-html {
-  background: url('https://wallpapercave.com/wp/wp7720121.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 * {
     color: var(--fontColor);
     font-family: monospace;
@@ -21,8 +13,9 @@ body {
     background: var(--bg)
 }
 h1 {
+    opacity: 1;
     position: relative;
-    padding-top: 1%;
+    padding-top: 3%;
     margin: auto;
 }
 ul {
@@ -47,20 +40,22 @@ li {
     margin: auto;
     top: 9%;
     bottom: 100%;
+    background-color: #ffffff;
+    min-height: 100vh;
+    opacity: .9;
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--green);
 }
 
-.center {
-  opacity: 0.9;
+/*.center {
+  opacity: 0.2;
   width: 100%;
-  top: 150%;
   position: absolute;
   min-height: 100vh;
-  background: rgb(246, 211, 255);
+  background: rgb(182, 182, 182);
 }
-
+*/
 .dark-theme {
     --bg: var(--black);
     --fontColor:rgb(150, 198, 245);
@@ -69,20 +64,24 @@ li {
 }
 
 .header a{
+    opacity: 1;
     float: center;
     color: rgb(150, 198, 245);
     text-align: center;
     padding: 12px;
     text-decoration: none;
+    font-family: calibri;
     font-size: 18 px;
+    font-variant: small-caps;
     line-height: 25px;
     border-radius: 4px;
-
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
-    font-size: 25px;
+    margin-left: 38%;
+    height: auto;
+    font-size: 10px;
     font-weight: bold;
   }
   
@@ -100,7 +99,8 @@ li {
   
   /* Float the link section to the right */
   .header-right {
-    float: right;
+    float: center;
+    margin-left: 28%;
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */

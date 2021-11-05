@@ -1,0 +1,18 @@
+:root {
+    --green: #00FF00; 
+    --white: #ffffff;
+    --black: #000000;
+}
+
+html {
+  background: url('https://wallpapercave.com/wp/wp7720121.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    color: var(--fontColor);
+    font-family: monospace;
+}
