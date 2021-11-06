@@ -9,6 +9,10 @@
     font-family: monospace;
 }
 
+html {
+  width: 100vw;
+}
+
 body {
     background: var(--bg)
 }
@@ -34,6 +38,7 @@ li {
     font-family: monospace;
 }
 
+/* PRIMARY STRUCTURE OF EACH PAGE */
 .mainC {
     max-width: 700px;
     position: -webkit-sticky;
@@ -64,6 +69,7 @@ li {
     --btnFontColor: var(--black);
 }
 
+/* HEADER GENERAL */
 .header a{
     opacity: 1;
     color: rgb(150, 198, 245);
@@ -77,9 +83,10 @@ li {
     border-radius: 4px;
 }
 
+/* header logo */
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
-    margin: 35%;
+    margin: 41%;
     position: relative;
     height: auto;
     font-size: 10px;
@@ -100,7 +107,7 @@ li {
   
   /* Float the link section to the right */
   .header-right {
-    position: -webkit-sticky
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     margin: auto;
@@ -120,8 +127,51 @@ li {
     }
   }
 
-/*
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(173, 173, 173);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 219, 250);
+  border-radius: 10px;
+
+}
+
 .card {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 10px;
+  width: 700px;
+  height: 300px;
+  opacity: 1;
+  box-shadow:0 8px 16px 0 rgba(83, 193, 226, 0.2);
+}
+
+.card img{
+  opacity: 1;
+  z-index: 1;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  border: 7px solid #fff;
+  transition-duration: 0.4s;
+  transition-property: transform;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 
@@ -132,6 +182,7 @@ li {
 }
 
 .cardContainer {
+  text-align: center;
   padding: 2px 16px;
 }
 
@@ -148,4 +199,3 @@ li {
 }
 
 .btn:focus { outline-style: none; }
-*/
