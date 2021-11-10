@@ -48,7 +48,6 @@ li {
     bottom: 100%;
     background-color: #ffffff;
     min-height: 100vh;
-    opacity: .9;
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--green);
@@ -147,7 +146,9 @@ li {
 }
 
 .card {
-  margin-top: 25px;
+  /*columns: 275px 2;
+  column-rule: 4px double rgb(150, 198, 245);*/
+  margin-top: 55px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -155,21 +156,26 @@ li {
   width: 700px;
   height: 300px;
   opacity: 1;
-  box-shadow:0 8px 16px 0 rgba(83, 193, 226, 0.2);
+  box-shadow:0 8px 16px 0 rgba(150, 198, 245, 0.2);
 }
 
-.card img{
-  opacity: 1;
-  z-index: 1;
+.cardImg{
+  position: absolute;
+  left: 0;
+  margin-top: auto;
+  width: 55%;
+  
+}
+
+.cardImg img{
   width: 180px;
   height: 180px;
-  position: relative;
-  margin-top: 10px;
   display: block;
+  margin-top: auto;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 100px;
-  border: 7px solid #fff;
+  border-radius: 110px;
+  border: 6px solid #fff;
   transition-duration: 0.4s;
   transition-property: transform;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -177,13 +183,19 @@ li {
 
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.cardContainer {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: auto;
+  text-align: center;
+  margin-right: auto;
+  margin-top: auto;
+  width: 55%;
 }
 
-.cardContainer {
-  text-align: center;
-  padding: 2px 16px;
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .btn {
