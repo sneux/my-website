@@ -1,7 +1,13 @@
+/*
+width: max-content;
+use outline to see blocks
+
+*/
 :root {
     --green: #00FF00; 
     --white: #ffffff;
     --black: #000000;
+    --typewriterSpeed: 2s;
 }
 
 * {
@@ -14,13 +20,10 @@ html {
 }
 
 body {
-    background: var(--bg)
-}
-h1 {
-    opacity: 1;
-    position: relative;
-    padding-top: 3%;
-    margin: auto;
+    background: var(--white);
+    display: grid;
+    
+
 }
 
 ul {
@@ -144,6 +147,54 @@ li {
   border-radius: 10px;
 
 }
+h1 {
+  position: relative;
+  padding-top: 3%;
+  width: max-content;
+  left: 72%;
+  
+
+}
+
+h1::before,
+h1::after {
+content: '';
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+position: absolute;
+
+}
+
+h1::before {
+background: var(--white);
+animation: typewriter var(--typewriterSpeed) steps(6) .5s forwards;
+
+}
+
+h1::after {
+width: .123em;
+background: black;
+animation: typewriter var(--typewriterSpeed) steps(6) .5s forwards,
+blink 240ms steps(6) infinite;
+}
+
+@keyframes typewriter {
+to { left: 100%}
+}
+
+@keyframes blink{
+to {
+  background: transparent;
+}
+}
+
+.typeOutHello {
+  position: relative;
+  margin-right: 55px;
+  outline: red 2px;
+}
 
 .card {
   /*columns: 275px 2;
@@ -157,6 +208,7 @@ li {
   height: 300px;
   opacity: 1;
   box-shadow:0 8px 16px 0 rgba(150, 198, 245, 0.2);
+  
 }
 
 .cardImg{
@@ -183,6 +235,13 @@ li {
 
 }
 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .cardContainer {
   display: block;
   position: absolute;
@@ -192,6 +251,9 @@ li {
   margin-right: auto;
   margin-top: auto;
   width: 55%;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease 3s forwards;
 }
 
 .card:hover {
