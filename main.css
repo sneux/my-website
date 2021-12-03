@@ -21,81 +21,60 @@ html {
 
 body {
     background: var(--white);
-    display: grid;
-    
-
 }
 
-ul {
-    font-family: helvetica;
-}
-li {
-    list-style: dot;
-}
-
-.list {
-    list-style: dot;
+li, a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: calibri;
+  font-size: 18px;
+  font-variant: small-caps;
+  line-height: 25px;
+  text-align: right;
 }
 
 #msg {
     font-family: monospace;
 }
 
-/* PRIMARY STRUCTURE OF EACH PAGE */
-.mainC {
-    max-width: 700px;
-    position: -webkit-sticky;
-    position: sticky;
-    margin: auto;
-    top: 9%;
-    bottom: 100%;
-    background-color: #ffffff;
-    min-height: 100vh;
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--green);
-}
-
-/*.center {
-  opacity: 0.2;
-  width: 100%;
-  position: absolute;
-  min-height: 100vh;
-  background: rgb(182, 182, 182);
-}
-*/
-.dark-theme {
-    --bg: var(--black);
-    --fontColor:rgb(150, 198, 245);
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
-}
-
 /* HEADER GENERAL */
-.header a{
-    opacity: 1;
+header {
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
     color: rgb(150, 198, 245);
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-family: calibri;
-    font-size: 18 px;
-    font-variant: small-caps;
+    padding: 30px 10%;
     line-height: 25px;
-    border-radius: 4px;
+    text-align: right;
 }
 
 /* header logo */
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-    margin: 41%;
-    max-width: max-content;
-    position: relative;
-    height: auto;
-    font-size: 10px;
-    font-weight: bold;
+.logo {
+    left: 0;
   }
   
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: black;
+}
+
   /* Change the background color on mouse-over */
   .header a:hover {
     background-color: rgb(225, 244, 255);
@@ -110,16 +89,12 @@ li {
   
   /* Float the link section to the right */
   .header-right {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    margin: auto;
-    width: 50%;
-    text-align: center;
+    margin-top: 0%;
+    text-align: right;
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1000px) {
     .header a {
       float: none;
       display: block;
@@ -201,24 +176,21 @@ to {
 .card {
   /*columns: 275px 2;
   column-rule: 4px double rgb(150, 198, 245);*/
-  display: grid;
-  margin-top: 40%;
-  margin-left: auto;
+  margin-top: auto;
+  right: 50;
   margin-right: auto;
   position: absolute;
-  padding-top: 10px;
-  width: 700px;
-  height: 300px;
+  padding-top: 0px;
+  width: 300px;
+  height: 400px;
   opacity: 1;
-  box-shadow:0 8px 16px 0 rgba(150, 198, 245, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   
 }
 
 .cardImg{
-  position: absolute;
-  left: 0;
+  position: relative;
   margin-top: auto;
-  width: 55%;
   
 }
 
@@ -230,7 +202,7 @@ to {
   margin-left: auto;
   margin-right: auto;
   border-radius: 110px;
-  border: 4px solid #fff;
+  border: 6px solid #fff;
   transition-duration: 0.4s;
   transition-property: transform;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -252,16 +224,18 @@ to {
   top: auto;
   text-align: center;
   margin-right: auto;
-  margin-top: auto;
+  margin-top: 15%;
   width: 55%;
   transform: translateY(3rem);
   animation: fadeInUp 2s ease 3.5s forwards;
   opacity: 0;
 }
 
+/*
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+*/
 
 .btn {
     position: left;
@@ -276,3 +250,26 @@ to {
 }
 
 .btn:focus { outline-style: none; }
+
+
+/* PRIMARY STRUCTURE OF EACH PAGE 
+.mainC {
+  max-width: 1400px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: auto;
+  top: 9%;
+  bottom: 100%;
+  background-color: #ffffff;
+  min-height: 100vh;
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--green);
+}
+/*
+.dark-theme {
+    --bg: var(--black);
+    --fontColor:rgb(150, 198, 245);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
