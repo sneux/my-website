@@ -139,6 +139,7 @@ header {
   justify-content: center;
   grid-gap: 10px;
   margin-top: 230px;
+  margin-bottom: 230px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   width: 600px;
@@ -284,6 +285,15 @@ to {
 i{
   position: relative;
   margin: 0 10px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+  left: 0;
+  height: 55px;            /* Footer height */
+  background-color: white;
 }
 
 .btn {
