@@ -17,11 +17,19 @@ use outline to see blocks
 
 html {
   width: 100vw;
+  height: 100vh;
 }
 
 body {
   height: 100%;
-  background: linear-gradient(90deg, rgb(221, 236, 250) 25%, #ffffff 75%);
+  
+}
+
+.page-container {
+  border: 2px solid red;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(221, 236, 250) 50%, #ffffff 50%);
+
 }
 
 li, a {
@@ -134,10 +142,10 @@ header {
 }
 
 .grid-container {
-  border: 1px solid red;
+
   display: grid;
   justify-content: center;
-  grid-gap: 10px;
+  grid-gap: 50px;
   margin-top: 230px;
   margin-bottom: 230px;
   grid-template-columns: 1fr 1fr;
@@ -150,7 +158,7 @@ header {
 
 
 h1 {
-  border: 1px solid red;
+
   position: absolute;
   font-size: 450%;
   width: max-content;
@@ -249,7 +257,7 @@ to {
 }
 
 .cardContainer {
-  border: 1px solid red;
+
   max-width: 325px;
   transform: translateY(3rem);
   animation: fadeInUp 2s ease 3.5s forwards;
@@ -287,11 +295,12 @@ i{
   margin: 0 10px;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0%;
+footer {
+  position: relative;
   right: 0;
   left: 0;
+  bottom: 0;
+  text-align: center;
   height: 55px;            /* Footer height */
   background-color: white;
 }
